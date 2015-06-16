@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">NIGERIA AND HER LEADERS</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_tab1">Tab1Activity</string>
+    <string name="title_activity_tab2">Tab2Activity</string>
+    <string name="title_activity_tab3">Tab3Activity</string>
+    <string name="title_activity_balewa">Balewa</string>
+    <string name="title_activity_balewa__achievements">Balewa_Achievements</string>
+    <string name="title_activity_balewa__bibliograghy">Balewa_Bibliograghy</string>
+    <string name="title_activity_balewa__biblography">Balewa_Biblography</string>
+    <string name="balewa_bio">
+</string>
+    <string name="title_activity_nnamdi">Nnamdi</string>
+    <string name="title_activity_nnamdi_bio">Nnamdi_bio</string>
+    <string name="title_activity_ironsi">Ironsi</string>
+    <string name="title_activity_ironsi_biography">Ironsi_biography</string>
+    <string name="title_activity_gowon">Gowon</string>
+    <string name="title_activity_gowon_biography">Gowon_biography</string>
+    <string name="title_activity_murtala">Murtala</string>
+    <string name="title_activity_murtala_biography">Murtala_biography</string>
+    <string name="title_activity_obasanjo">Obasanjo</string>
+    <string name="title_activity_obasanjo_biography">Obasanjo_biography</string>
+    <string name="title_activity_shehu">Shehu</string>
+    <string name="title_activity_shehu_bio">Shehu_bio</string>
+    <string name="title_activity_buhari">buhari</string>
+    <string name="title_activity_buhari_bio">Buhari_bio</string>
+    <string name="title_activity_ibrahim">Ibrahim</string>
+    <string name="title_activity_ibrahim_bio">Ibrahim_bio</string>
+    <string name="title_activity_ernest">Ernest</string>
+    <string name="title_activity_ernest_bio">Ernest_bio</string>
+    <string name="title_activity_abacha">Abacha</string>
+    <string name="title_activity_abacha_bio">Abacha_bio</string>
+    <string name="title_activity_abubakar">Abubakar</string>
+    <string name="title_activity_abubakar_bio">Abubakar_bio</string>
+    <string name="title_activity_musa">Musa</string>
+    <string name="title_activity_musa_bio">Musa_bio</string>
+    <string name="title_activity_goodluck">Goodluck</string>
+    <string name="title_activity_goodluck_bio">Goodluck_bio</string>
+    <string name="title_activity_register">RegisterActivity</string>
+
+</resources>
