@@ -1,12 +1,20 @@
 package com.example.elvis.nigerian_leaders;
 import android.app.Activity;
+import android.app.LoaderManager;
+import android.content.ContentResolver;
 import android.content.Context;
+import android.content.CursorLoader;
+import android.content.Loader;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.TooManyListenersException;
 
 
 public class Abubakar_bio extends Activity {
@@ -37,16 +45,16 @@ public class Abubakar_bio extends Activity {
 
 
         DatabaseOperations DB = new DatabaseOperations(ctx);
-        DB.putInfomation(DB, article);
+        DB.putInfomation3(DB, article);
 
 
         DatabaseOperations DOP = new DatabaseOperations(CTX);
-        Cursor CR = DOP.getInformation(DOP);
-        CR.moveToLast();
+        Cursor CR = DOP.getInformation3(DOP);
+        CR.moveToNext();
         String NAME = "";
         NAME = CR.getString(0);
 
-        ARTICLE.setText(NAME);
+        ARTICLE.setText( NAME);
 
 
     }
@@ -73,4 +81,7 @@ public class Abubakar_bio extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }

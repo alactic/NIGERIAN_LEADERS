@@ -1,7 +1,11 @@
 package com.example.elvis.nigerian_leaders;
 import android.app.Activity;
+import android.app.LoaderManager;
 import android.content.Context;
+import android.content.CursorLoader;
+import android.content.Loader;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,13 +13,12 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-public class Ironsi_biography extends Activity {
+public class Ironsi_biography extends Activity{
     String article;
     Context ctx=this;
     Button Login;
     TextView ARTICLE;
     Context CTX=this;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,11 +38,11 @@ public class Ironsi_biography extends Activity {
                   "             Ironsi inherited a Nigeria deeply fractured by its ethnic and religious cleavages. The fact that none of the high-profile victims of the 1966 coup were of Igbo extraction, and also that the main beneficiaries of the coup were Igbo, led the Northern part of the country to believe that it was an Igbo conspiracy. Though Ironsi tried to dispel this notion by courting the aggrieved ethnic groups through political appointments and patronage, his failure to punish the coup plotters and the promulgation of the now infamous \"Decree No. 34\"—which abrogated the country's federal structure in exchange for a unitary one— crystallized this conspiracy theory.\n" +
                   "             During his short regime Aguiyi-Ironsi promulgated a raft of decrees. Among them were the Constitution Suspension and Amendment Decree No.1, which suspended most articles of the Constitution (though he left intact those sections of the constitution that dealt with fundamental human rights, freedom of expression and conscience were left intact). The Circulation of Newspaper Decree No.2 which removed the restrictions on press freedom put in place by the preceding civilian administration. According to Ndayo Uko, the Decree no.2 was to serve \"as a kind gesture to the press..\" to safeguard himself when he went on later to promulgate the Defamatory and Offensive Decree No.44 of 1966 which made it an \"offense to display or pass on pictorial representation, sing songs, or play instruments the words of which are likely to provoke any section of the country.\"He also as per the proposals of a single man committee passed the controversial Unification Decree No. 34 aimed to unify Nigeria into a unitary state. This decree effectively gave prefriential treatment to the Igbo in Unified State were the Regions no longer had any sort of autonomy from the Federal Government.\n";
         DatabaseOperations DB = new DatabaseOperations(ctx);
-        DB.putInfomation(DB, article);
+        DB.putInfomation10(DB, article);
 
         DatabaseOperations DOP = new DatabaseOperations(CTX);
-        Cursor CR = DOP.getInformation(DOP);
-        CR.moveToLast();
+        Cursor CR = DOP.getInformation10(DOP);
+        CR.moveToNext();
         String NAME = "";
         NAME = CR.getString(0);
 

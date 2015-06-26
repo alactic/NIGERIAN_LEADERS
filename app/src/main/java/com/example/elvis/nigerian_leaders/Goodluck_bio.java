@@ -1,7 +1,11 @@
 package com.example.elvis.nigerian_leaders;
 import android.app.Activity;
+import android.app.LoaderManager;
 import android.content.Context;
+import android.content.CursorLoader;
+import android.content.Loader;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +25,7 @@ public class Goodluck_bio extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goodluck_bio);
         ARTICLE= (TextView) findViewById(R.id.Goodluck);
+
 
         article = "         Goodluck Ebele Azikiwe Jonathan, GCFR, BNER, GCON (born 20 November 1957) is a Nigerian politician and the President of Nigeria from 2010 to 2015. He re-contested and lost the recently concluded Presidential election, upon which he conceded defeat in the competitive election, the first sitting Nigerian president to do so. Prior to his role as President, he served as Governor of Bayelsa State from 2005 to 2007 and as Vice-President of Nigeria from 2007 to 2010.\n" +
                 "Jonathan's term as President of Nigeria will end on 29 May 2015, when he will hand over to President Elect Muhammadu Buhari.[citation needed]\n" +
@@ -45,11 +50,11 @@ public class Goodluck_bio extends Activity {
 
 
         DatabaseOperations DB = new DatabaseOperations(ctx);
-        DB.putInfomation(DB, article);
+        DB.putInfomation7(DB, article);
 
         DatabaseOperations DOP = new DatabaseOperations(CTX);
-        Cursor CR = DOP.getInformation(DOP);
-        CR.moveToLast();
+        Cursor CR = DOP.getInformation7(DOP);
+        CR.moveToNext();
         String NAME = "";
         NAME = CR.getString(0);
 
@@ -80,4 +85,5 @@ public class Goodluck_bio extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

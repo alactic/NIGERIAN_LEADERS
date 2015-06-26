@@ -1,20 +1,25 @@
 package com.example.elvis.nigerian_leaders;
 import android.app.Activity;
 import android.content.Context;
+import android.content.CursorLoader;
+import android.content.Loader;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.LoaderManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
 
-public class Gowon_biography extends Activity {
+public class Gowon_biography extends Activity  {
     String article;
     Context ctx=this;
     Button Login;
     TextView ARTICLE;
     Context CTX=this;
+    private Cursor cursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +53,11 @@ public class Gowon_biography extends Activity {
 
 
         DatabaseOperations DB = new DatabaseOperations(ctx);
-        DB.putInfomation(DB, article);
+        DB.putInfomation8(DB, article);
 
         DatabaseOperations DOP = new DatabaseOperations(CTX);
-        Cursor CR = DOP.getInformation(DOP);
-        CR.moveToLast();
+        Cursor CR = DOP.getInformation8(DOP);
+        CR.moveToNext();
         String NAME = "";
         NAME = CR.getString(0);
 
@@ -83,4 +88,5 @@ public class Gowon_biography extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

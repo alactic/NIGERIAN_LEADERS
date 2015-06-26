@@ -16,6 +16,7 @@ public class Abacha extends TabActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abacha);
 
+
         // create the TabHost that will contain the Tabs
         TabHost tabHost = (TabHost)findViewById(android.R.id.tabhost);
 

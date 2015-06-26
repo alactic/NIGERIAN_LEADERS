@@ -2,7 +2,10 @@ package com.example.elvis.nigerian_leaders;
 
 
 import android.app.TabActivity;
+import android.content.ContentResolver;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;

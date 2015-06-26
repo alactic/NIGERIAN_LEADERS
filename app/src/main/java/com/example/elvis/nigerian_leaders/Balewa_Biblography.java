@@ -1,14 +1,19 @@
 package com.example.elvis.nigerian_leaders;
 import android.app.Activity;
+import android.app.LoaderManager;
+import android.content.ContentResolver;
 import android.content.Context;
+import android.content.CursorLoader;
+import android.content.Loader;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Balewa_Biblography extends Activity {
+public class Balewa_Biblography extends Activity  {
     String article;
     Context ctx=this;
     Button Login;
@@ -56,12 +61,12 @@ public class Balewa_Biblography extends Activity {
 
 
         DatabaseOperations DB = new DatabaseOperations(ctx);
-        DB.putInfomation(DB, article);
+       DB.putInfomation4(DB, article);
 
 
         DatabaseOperations DOP = new DatabaseOperations(CTX);
-        Cursor CR = DOP.getInformation(DOP);
-        CR.moveToLast();
+        Cursor CR = DOP.getInformation4(DOP);
+        CR.moveToNext();
         String NAME = "";
         NAME = CR.getString(0);
 
@@ -92,4 +97,5 @@ public class Balewa_Biblography extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

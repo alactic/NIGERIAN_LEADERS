@@ -1,7 +1,11 @@
  package com.example.elvis.nigerian_leaders;
 import android.app.Activity;
+import android.app.LoaderManager;
 import android.content.Context;
+import android.content.CursorLoader;
+import android.content.Loader;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,7 +18,6 @@ public class Shehu_bio extends Activity {
     Context ctx=this;
     TextView ARTICLE;
     Context CTX=this;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,11 +40,11 @@ public class Shehu_bio extends Activity {
 
 
         DatabaseOperations DB = new DatabaseOperations(ctx);
-        DB.putInfomation(DB, article);
+        DB.putInfomation15(DB, article);
 
         DatabaseOperations DOP = new DatabaseOperations(CTX);
-        Cursor CR = DOP.getInformation(DOP);
-        CR.moveToLast();
+        Cursor CR = DOP.getInformation15(DOP);
+        CR.moveToNext();
         String NAME = "";
         NAME = CR.getString(0);
 
@@ -72,4 +75,5 @@ public class Shehu_bio extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

@@ -45,11 +45,11 @@ public class Abacha_bio extends Activity {
 
 
         DatabaseOperations DB = new DatabaseOperations(ctx);
-        DB.putInfomation(DB, article);
+        DB.putInfomation2(DB, article);
 
         DatabaseOperations DOP = new DatabaseOperations(CTX);
-        Cursor CR = DOP.getInformation(DOP);
-        CR.moveToLast();
+        Cursor CR = DOP.getInformation2(DOP);
+        CR.moveToNext();
         String NAME = "";
         NAME = CR.getString(0);
 

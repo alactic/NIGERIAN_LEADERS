@@ -1,7 +1,11 @@
 package com.example.elvis.nigerian_leaders;
 import android.app.Activity;
+import android.app.LoaderManager;
 import android.content.Context;
+import android.content.CursorLoader;
+import android.content.Loader;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,7 +17,6 @@ public class Ernest_bio extends Activity {
     String article;
     Context ctx=this;
     Button Login;
-
     TextView ARTICLE;
     Context CTX=this;
 
@@ -43,11 +46,11 @@ public class Ernest_bio extends Activity {
 
 
         DatabaseOperations DB = new DatabaseOperations(ctx);
-        DB.putInfomation(DB, article);
+        DB.putInfomation6(DB, article);
 
         DatabaseOperations DOP = new DatabaseOperations(CTX);
-        Cursor CR = DOP.getInformation(DOP);
-        CR.moveToLast();
+        Cursor CR = DOP.getInformation6(DOP);
+        CR.moveToNext();
         String NAME = "";
         NAME = CR.getString(0);
 

@@ -88,10 +88,10 @@ public class Tab3Activity extends Activity {
 
 
         DatabaseOperations DB = new DatabaseOperations(ctx);
-        DB.putInfomation(DB, article);
+        DB.putInfomation2(DB, article);
 
         DatabaseOperations DOP = new DatabaseOperations(CTX);
-        Cursor CR = DOP.getInformation(DOP);
+        Cursor CR = DOP.getInformation2(DOP);
         CR.moveToLast();
         String NAME = "";
         NAME = CR.getString(0);

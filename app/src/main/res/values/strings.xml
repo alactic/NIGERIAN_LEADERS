@@ -39,5 +39,6 @@
     <string name="title_activity_goodluck">Goodluck</string>
     <string name="title_activity_goodluck_bio">Goodluck_bio</string>
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_data_base_test">DataBaseTest</string>
 
 </resources>

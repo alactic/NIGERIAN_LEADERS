@@ -1,7 +1,11 @@
 package com.example.elvis.nigerian_leaders;
 import android.app.Activity;
+import android.app.LoaderManager;
 import android.content.Context;
+import android.content.CursorLoader;
+import android.content.Loader;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,7 +18,6 @@ public class Obasanjo_biography extends Activity {
     Button Login;
     TextView ARTICLE;
     Context CTX=this;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,11 +39,11 @@ public class Obasanjo_biography extends Activity {
 
 
         DatabaseOperations DB = new DatabaseOperations(ctx);
-        DB.putInfomation(DB, article);
+        DB.putInfomation14(DB, article);
 
         DatabaseOperations DOP = new DatabaseOperations(CTX);
-        Cursor CR = DOP.getInformation(DOP);
-        CR.moveToLast();
+        Cursor CR = DOP.getInformation14(DOP);
+        CR.moveToNext();
         String NAME = "";
         NAME = CR.getString(0);
 
@@ -70,5 +73,4 @@ public class Obasanjo_biography extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-}
+    }}
