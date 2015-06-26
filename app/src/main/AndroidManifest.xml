@@ -17,9 +17,6 @@
             </intent-filter>
         </activity>
 
-        <provider
-            android:name=".MyContentPrvider"
-            android:authorities="elvis.provider" />
 
         <activity
             android:name=".Tab1Activity"
@@ -265,14 +262,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="MainActivity" />
         </activity>
-        <activity
-            android:name=".DataBaseTest"
-            android:label="@string/title_activity_data_base_test"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="MainActivity" />
-        </activity>
+
     </application>
 
 </manifest>

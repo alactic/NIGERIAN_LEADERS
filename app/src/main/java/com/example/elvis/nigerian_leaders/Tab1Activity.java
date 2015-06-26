@@ -14,19 +14,18 @@ import android.widget.TextView;
 
 
 
-public class Tab1Activity extends Activity implements LoaderManager.LoaderCallbacks<Cursor>{
+public class Tab1Activity extends Activity {
     String article;
     Context ctx=this;
     TextView ARTICLE;
     Context CTX=this;
-    private Cursor cursor;
+    private Cursor cursor2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab1);
         ARTICLE= (TextView) findViewById(R.id.tab1);
-        getLoaderManager().initLoader(5,null, this);
 
         article = "         Nigeria i/naɪˈdʒɪəriə/, officially the Federal Republic of Nigeria, is a federal constitutional republic comprising 36 states and its Federal Capital Territory, Abuja. Nigeria is located in West Africa and shares land borders with the Republic of Benin in the west, Chad and Cameroon in the east, and Niger in the north. Its coast in the south lies on the Gulf of Guinea in the Atlantic Ocean.\n" +
                 "\n" +
@@ -38,6 +37,15 @@ public class Tab1Activity extends Activity implements LoaderManager.LoaderCallba
 
         DatabaseOperations DB = new DatabaseOperations(ctx);
         DB.putInfomation(DB, article);
+
+        DatabaseOperations DOP = new DatabaseOperations(CTX);
+        Cursor CR = DOP.getInformation(DOP);
+        CR.moveToNext();
+        String NAME = "";
+        NAME = CR.getString(0);
+
+        ARTICLE.setText(NAME);
+
 
 
     }
@@ -64,27 +72,5 @@ public class Tab1Activity extends Activity implements LoaderManager.LoaderCallba
 
         return super.onOptionsItemSelected(item);
     }
-    @Override
-    public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
-        Uri uri = Uri.parse("content://elvis.provider/" + TableData.TableInfo.TABLE_NAME);
-        return new CursorLoader(Tab1Activity.this,uri, new String[]{TableData.TableInfo.ARTICLE},null,null,null);
-    }
 
-    @Override
-    public void onLoadFinished(Loader<Cursor> objectLoader, Cursor o) {
-
-        cursor = o;
-        cursor.moveToNext();
-        String tx = cursor.getString(0);
-        ARTICLE.setText(tx);
-    }
-
-    @Override
-
-
-
-
-    public void onLoaderReset(Loader<Cursor> objectLoader) {
-
-    }
 }
