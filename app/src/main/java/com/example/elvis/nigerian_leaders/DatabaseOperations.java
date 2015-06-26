@@ -12,7 +12,7 @@ import android.util.Log;
  * Created by elvis on 6/12/2015.
  */
 public class DatabaseOperations extends SQLiteOpenHelper {
-    public static final int database_version=13;
+    public static final int database_version=16;
     public String CREATE_QUERY="CREATE TABLE "+ TableData.TableInfo.TABLE_NAME+"("+ TableData.TableInfo.ARTICLE+" TEXT);";
     public String CREATE_QUERY1="CREATE TABLE "+ TableData.TableInfo.TABLE_NAME1+"("+ TableData.TableInfo.ARTICLE+" TEXT);";
     public String CREATE_QUERY2="CREATE TABLE "+ TableData.TableInfo.TABLE_NAME2+"("+ TableData.TableInfo.ARTICLE+" TEXT);";
